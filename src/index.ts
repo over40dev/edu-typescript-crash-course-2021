@@ -10,7 +10,13 @@ let ids : number[] = [1, 2, 3, 4, 5];
 // Tuple
 let person : [number, string, boolean] = [1, 'me', true];
 
-
+// Tuple Array
+let employee : [number, string][] = [
+  [
+    1, 'me'
+  ],
+  [2, 'you'],
+];
 
 
 
