@@ -98,3 +98,30 @@ function add(x:number, y:number): number {
 function logMessage(message: number | string): void {
   console.log(message);
 }
+
+// Interfaces - very similar to 'type' declaration
+// 'age' is optional
+// 'id' is readonly
+interface UserInterface {
+  readonly id: number
+  name: string
+  age?: number
+}
+
+const user1: UserInterface = {
+  id: 1,
+  name: 'Jane',
+}
+
+// Interface and Type differences (mostly the same) however you cannot use an interface with primitives or Unions as shown below:
+type Point = number | string;
+const p1: Point = 1;
+
+// Function Interface
+// this example takes in two numbers and returns a number
+interface MathFunc {
+  (x:number, y:number): number
+}
+// the interface can be applied to two different functions as long as they have the same type 'signature'
+const mathAdd: MathFunc = (x, y) => x + y;
+const mathSub: MathFunc = (x, y) => x - y;
