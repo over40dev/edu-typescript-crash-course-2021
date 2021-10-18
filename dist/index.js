@@ -6,3 +6,5 @@ let isPub = true;
 let x = 'Hello';
 // Arrays
 let ids = [1, 2, 3, 4, 5];
+// Tuple
+let person = [1, 'me', true];
