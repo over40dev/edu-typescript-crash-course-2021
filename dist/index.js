@@ -116,3 +116,26 @@ const emp1 = new Employee(3, 'Jane', 'PM');
 const emp2 = new Employee(4, 'Joe', 'Dev');
 // Jane is now registered
 console.log(emp1.register());
+// Generics
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3, 4]);
+let strArray = getArray(['Brad', 'Jane', 'Joe']);
+// pushing a string into the numArray will work because the type of array is defined as 'any[]' meaning any type of data
+numArray.push('hello');
+// to protect against this we can use 'Generics'
+// use '<T>' as a Type placeholder
+// This allows us to create re-usable components
+function getArrayGeneric(items) {
+    return new Array().concat(items);
+}
+// we pass the type to the Generics function using '<data-type>' between the function name and parens
+let numArrayGenerics = getArrayGeneric([1, 2, 3, 4]);
+let strArrayGenerics = getArrayGeneric(['Brad', 'Jane', 'Joe']);
+// now trying to push a string into the array of numbers will not work but pushing a number will work. Same goes for the string array
+// numArrayGenerics.push('hello');
+numArrayGenerics.push(5);
+// logs to the console...
+// (5) [1, 2, 3, 4, 5] (3) ['Brad', 'Jane', 'Joe']
+console.log(numArrayGenerics, strArrayGenerics);
