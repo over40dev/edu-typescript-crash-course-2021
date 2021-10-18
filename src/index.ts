@@ -125,3 +125,34 @@ interface MathFunc {
 // the interface can be applied to two different functions as long as they have the same type 'signature'
 const mathAdd: MathFunc = (x, y) => x + y;
 const mathSub: MathFunc = (x, y) => x - y;
+
+// Classes - used as blueprints to create object instances
+class Person {
+  // data modifier - private only accessible from within class
+  private id: number; 
+    // data modifier - protected only accessible from within class or any class that derives from this class
+    // We've also made 'age' optional by using the '?' mark after variable name and before colon defining type
+  protected age?: number;
+  // public by default so don't need 'public' keyword
+  name: string; 
+
+  constructor(id:number, name: string) {
+    this.id = id;
+    this.name = name;
+  }
+
+  register(): string {
+    return `${this.name} is now registered`;
+  }
+}
+
+const jane = new Person(1, 'Jane');
+const joe = new Person(2, 'Joe');
+
+console.log(jane);
+console.log(joe);
+// logs "Jane is now registered"
+console.log(jane.register());
+
+// gives error because of data accessibility set to private
+// console.log(jane.id); 
