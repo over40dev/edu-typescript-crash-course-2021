@@ -70,3 +70,12 @@ let customerId = cid; // one way
 let customerId2 = cid; // another way
 // Causes type error since type boolean is not assignable to type number
 // customerId = true; 
+// Functions
+function add(x, y) {
+    // return 'my name is...' // produces error because return type mus be number
+    return x + y; // returns a number which is valid
+}
+// Functions - when nothing returned - use 'void'
+function logMessage(message) {
+    console.log(message);
+}

@@ -88,3 +88,13 @@ let customerId2 = cid as number; // another way
 // Causes type error since type boolean is not assignable to type number
 // customerId = true; 
 
+// Functions
+function add(x:number, y:number): number {
+  // return 'my name is...' // produces error because return type mus be number
+  return x + y;    // returns a number which is valid
+}
+
+// Functions - when nothing returned - use 'void'
+function logMessage(message: number | string): void {
+  console.log(message);
+}
