@@ -63,4 +63,10 @@ const user = {
     id: 1,
     name: 'Jane'
 };
-console.log(Object.assign({}, user));
+// Type Assertion
+// Defines a type for one variable different from the the type of the variable being assigned
+let cid = 1;
+let customerId = cid; // one way
+let customerId2 = cid; // another way
+// Causes type error since type boolean is not assignable to type number
+// customerId = true; 
