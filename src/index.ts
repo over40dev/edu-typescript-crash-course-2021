@@ -17,3 +17,9 @@ let employee : [number, string][] = [
   ],
   [2, 'you'],
 ];
+
+// Union - either or
+let pid: string | number = 22;
+
+pid = 22;
+pid='22';

@@ -15,3 +15,7 @@ let employee = [
     ],
     [2, 'you'],
 ];
+// Union - either or
+let pid = 22;
+pid = 22;
+pid = '22';
