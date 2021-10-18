@@ -87,3 +87,21 @@ const p1 = 1;
 // the interface can be applied to two different functions as long as they have the same type 'signature'
 const mathAdd = (x, y) => x + y;
 const mathSub = (x, y) => x - y;
+// Classes - used as blueprints to create object instances
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.name} is now registered`;
+    }
+}
+const jane = new Person(1, 'Jane');
+const joe = new Person(2, 'Joe');
+console.log(jane);
+console.log(joe);
+// logs "Jane is now registered"
+console.log(jane.register());
+// gives error because of data accessibility set to private
+// console.log(jane.id); 
