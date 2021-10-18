@@ -126,8 +126,18 @@ interface MathFunc {
 const mathAdd: MathFunc = (x, y) => x + y;
 const mathSub: MathFunc = (x, y) => x - y;
 
+// Implementing Interface in Class
+// Note that all interface variable and method definitions are 'public'. You cannot use data modifiers such as 'private' or 'protected' - they can just be used in the class directly
+// When a class implements an interface it must include ALL elements however the class itself is not limited to only using the variables and methods defined in the interface
+interface PersonInterface {
+  // id:number;
+  name: string;
+  // age?:number;
+  register(): string;
+}
+
 // Classes - used as blueprints to create object instances
-class Person {
+class Person implements PersonInterface {
   // data modifier - private only accessible from within class
   private id: number; 
     // data modifier - protected only accessible from within class or any class that derives from this class
