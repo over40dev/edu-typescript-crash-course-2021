@@ -166,3 +166,20 @@ console.log(jane.register());
 
 // gives error because of data accessibility set to private
 // console.log(jane.id); 
+
+// Extending Classes (sub-classes)
+class Employee extends Person {
+  position: string;
+
+  constructor(id:number,name:string,position:string) {
+    super(id, name);
+    this.position = position;
+  }
+}
+
+const emp1 = new Employee(3, 'Jane', 'PM');
+const emp2 = new Employee(4, 'Joe', 'Dev');
+
+// Jane is now registered
+console.log(emp1.register());
+
