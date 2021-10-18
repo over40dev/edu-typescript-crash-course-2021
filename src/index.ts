@@ -67,11 +67,14 @@ console.log(Direction3.Up); // Down
 console.log(Direction3.Left); // Left
 console.log(Direction3.Right); // Right
 
-// Objects
-const user : {
-  id : number,
-  name : string
-} = {
+// Objects and Type Assertions
+// Defining more complex types such as Objects inline can seen a bit awkward 
+// To solve this we can separate out the Type by using a Type Assertion
+type User = {
+  id: number,
+  name: string
+}
+const user : User = {
   id: 1,
   name: 'Jane'
 }
