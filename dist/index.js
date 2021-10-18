@@ -8,3 +8,10 @@ let x = 'Hello';
 let ids = [1, 2, 3, 4, 5];
 // Tuple
 let person = [1, 'me', true];
+// Tuple Array
+let employee = [
+    [
+        1, 'me'
+    ],
+    [2, 'you'],
+];
