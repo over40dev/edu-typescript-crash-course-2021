@@ -4,3 +4,6 @@ let company : string = 'Me Inc.';
 let isPub : boolean = true;
 let x : any = 'Hello';
 
+// Arrays
+let ids : number[] = [1, 2, 3, 4, 5];
+
