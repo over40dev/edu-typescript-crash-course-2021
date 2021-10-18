@@ -79,3 +79,11 @@ function add(x, y) {
 function logMessage(message) {
     console.log(message);
 }
+const user1 = {
+    id: 1,
+    name: 'Jane',
+};
+const p1 = 1;
+// the interface can be applied to two different functions as long as they have the same type 'signature'
+const mathAdd = (x, y) => x + y;
+const mathSub = (x, y) => x - y;
