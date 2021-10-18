@@ -59,3 +59,9 @@ console.log(Direction3.Down); // Up
 console.log(Direction3.Up); // Down
 console.log(Direction3.Left); // Left
 console.log(Direction3.Right); // Right
+// Objects
+const user = {
+    id: 1,
+    name: 'Jane'
+};
+console.log(Object.assign({}, user));
